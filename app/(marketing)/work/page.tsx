@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Case studies and selected work from Circle Hook — websites built for wealth advisors and financial advisory firms.",
+    "Case studies and selected work from Circle Hook. Websites built for wealth advisors and financial advisory firms.",
 };
 
 export default function WorkPage() {

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://circlehook.io"),
   title: {
     default: "Circle Hook",
-    template: "%s — Circle Hook",
+    template: "%s | Circle Hook",
   },
   description:
     "Circle Hook builds modern, compliance-aware websites for wealth advisors, brokerages, and the firms that serve them.",

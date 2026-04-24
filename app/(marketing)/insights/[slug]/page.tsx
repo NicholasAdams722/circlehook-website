@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     .join(" ");
   return {
     title,
-    description: `${title} — an insight from Circle Hook.`,
+    description: `${title}. An insight from Circle Hook.`,
   };
 }
 

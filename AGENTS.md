@@ -219,6 +219,7 @@ The aesthetic brief: **editorial-modern, refined, quietly confident, unmistakabl
 - "We're passionate about...", "We believe that...", "In today's digital landscape...", "Are you tired of...".
 - Second-person hectoring: "You need a website that...", "Your business deserves...".
 - Emojis in marketing copy. Exclamation marks, one per page max and only if genuinely earned.
+- Em dashes (—) anywhere in copy or UI text. They read as AI-generated. Use a comma, period, or rewrite the sentence instead.
 - Performance claims or return figures, ever, even as examples.
 
 ### Voice samples

@@ -92,6 +92,13 @@ export const contact = {
     "Something went wrong. Please try again, or email nick@circlehook.io directly.",
   secondaryCtaPrefix: "Prefer a call?",
   secondaryCtaLink: "Schedule a free 30-minute consultation.",
+  quickContact: {
+    scheduleLabel: "Schedule a 30-minute call",
+    emailLabel: "Email me directly",
+    emailSubject: "Inquiry from circlehook.io",
+    emailBody:
+      "Firm name:\n\nFirm type:\n\nWhat's prompting the conversation:\n",
+  },
 } as const;
 
 export const footer = {

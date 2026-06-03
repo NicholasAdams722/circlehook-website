@@ -75,7 +75,7 @@ export type FirmType = (typeof FIRM_TYPES)[number];
 export const contact = {
   heading: "Let's talk about your website",
   leadText:
-    "Tell me a little about your firm. I'll reply within one business day with a few questions and a time to talk.",
+    "Two ways to start the conversation. Book a 30-minute call, or send me a note with a few details about your firm. Either way, I reply within one business day.",
   fields: {
     name: { label: "Name", name: "name" },
     email: { label: "Work email", name: "email" },

@@ -37,7 +37,7 @@ export const services = {
     },
     {
       heading: "App Development",
-      body: "When a marketing site is not enough. Client portals, internal tools, calculators, and integrations with the platforms your firm already uses.",
+      body: "When a marketing site is not enough. Client portals, internal tools, interactive dashboards, calculators, and integrations with the platforms your firm already uses.",
     },
     {
       heading: "Graphic Design",

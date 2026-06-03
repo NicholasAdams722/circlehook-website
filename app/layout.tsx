@@ -1,30 +1,36 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { Header } from "@/components/layout/Header";
 
-const fraunces = Fraunces({
+const plexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-display",
+  display: "swap",
 });
 
-const geistSans = Geist({
+const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://circlehook.io"),
   title: {
-    default: "Circle Hook",
+    default:
+      "Circle Hook | Websites for RIAs, Insurance Brokers, and Regulated Financial Firms",
     template: "%s | Circle Hook",
   },
   description:
-    "Circle Hook builds modern, compliance-aware websites for wealth advisors, brokerages, and the firms that serve them.",
+    "Circle Hook builds modern, compliance-aware websites for RIAs, insurance brokers, IMOs, CPAs, and estate planning attorneys. Built by an operator who works inside an RIA.",
   openGraph: {
-    title: "Circle Hook",
+    title: "Circle Hook | Websites for Regulated Financial Firms",
     description:
-      "Circle Hook builds modern, compliance-aware websites for wealth advisors, brokerages, and the firms that serve them.",
+      "Modern, fast, compliance-aware websites for RIAs, insurance brokers, and the firms they trust.",
     url: "https://circlehook.io",
     siteName: "Circle Hook",
     locale: "en_US",
@@ -32,15 +38,37 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Circle Hook",
+    title: "Circle Hook | Websites for Regulated Financial Firms",
     description:
-      "Circle Hook builds modern, compliance-aware websites for wealth advisors, brokerages, and the firms that serve them.",
+      "Modern, fast, compliance-aware websites for RIAs, insurance brokers, and the firms they trust.",
   },
   robots: {
     index: true,
     follow: true,
   },
-  // TODO: add favicon files (/app/icon.png, /app/apple-icon.png)
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "Circle Hook",
+  legalName: "Circle Hook LLC",
+  url: "https://circlehook.io",
+  email: "nick@circlehook.io",
+  areaServed: "United States",
+  serviceType: "Website design and development",
+  knowsAbout: [
+    "Investment Adviser Marketing Rule",
+    "Form ADV",
+    "RIA compliance",
+    "Insurance broker websites",
+    "AI search optimization",
+    "Next.js development",
+  ],
+  founder: {
+    "@type": "Person",
+    name: "Nick Adams",
+  },
 };
 
 export default function RootLayout({
@@ -51,9 +79,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full antialiased", fraunces.variable, geistSans.variable)}
+      className={cn("h-full antialiased", plexSerif.variable, plexSans.variable)}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

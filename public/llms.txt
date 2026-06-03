@@ -1,0 +1,19 @@
+# Circle Hook
+
+Circle Hook is a one-person web design and development studio based in Tennessee. The studio builds modern, compliance-aware websites for regulated financial services firms: RIAs, insurance brokers, insurance networks and IMOs, CPAs, and estate planning attorneys.
+
+## Operator
+
+Nick Adams. Also serves as Director of Operations at Quantum Capital, a DBA of Patriot Advisory Group LLC, a state-registered RIA. Brings direct operating experience inside a regulated financial services firm to every website engagement.
+
+## Services
+
+- Website design and development for RIAs and insurance firms
+- Compliance-aware copywriting and content review
+- Modern stack migration from WordPress, Webflow, or template platforms
+- AI search optimization (schema markup, semantic HTML, llms.txt)
+
+## Contact
+
+Email: nick@circlehook.io
+Website: https://circlehook.io

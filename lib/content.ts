@@ -31,23 +31,45 @@ export const services = {
 } as const;
 
 export const whatYouGet = {
-  heading: "What you get when we work together",
+  heading: "What makes our work different",
   blocks: [
     {
-      heading: "A site that already passed compliance review.",
-      body: "Built with the Marketing Rule, your Form ADV, and your CCO's review checklist in mind from the first wireframe. No surprise rewrites.",
+      heading: "Design that holds up to scrutiny.",
+      body: "Typography that respects your reader. Layouts that are not a template. Visual choices that signal you take your work seriously, because your clients do.",
     },
     {
-      heading: "A modern stack that actually performs.",
-      body: "Next.js, deployed on Vercel, fast on every device, scored 95+ on Lighthouse, and easy to maintain without a developer on retainer.",
+      heading: "A user experience that does not waste time.",
+      body: "Every page earns its place. Every click moves toward a decision. No carousels, no popups, no scrolljacking, no friction between curiosity and contact.",
     },
     {
-      heading: "AI search visibility.",
-      body: "Schema markup, semantic HTML, llms.txt, and the structure that lets ChatGPT, Claude, and Perplexity cite your firm when prospects ask about advisors in your area.",
+      heading: "Found by Google. Cited by AI.",
+      body: "Technical SEO that ranks against agencies ten times the size, plus the structure that lets ChatGPT, Claude, and Perplexity cite your firm when prospects ask for recommendations.",
     },
     {
-      heading: "Three to six weeks, not three to six months.",
-      body: "Productized process, weekly check-ins, no agency drift, no chasing replies for a month at a time.",
+      heading: "Built to convert.",
+      body: "Every section has a job. Calls-to-action are placed where decisions get made, not where they look symmetrical. Forms are short, friction is removed, and the next step is always obvious.",
+    },
+  ],
+} as const;
+
+export const workflow = {
+  heading: "Our process",
+  steps: [
+    {
+      heading: "Onboarding",
+      body: "We start with a 30-minute call to understand your firm, your clients, and what success looks like. You get a written scope and timeline within three business days. No surprise change orders mid-project.",
+    },
+    {
+      heading: "Design and Production",
+      body: "Wireframes first, then visual design, then build. You see progress weekly, give feedback in one consolidated round per phase, and the site comes together in front of you. No black-box agency drift.",
+    },
+    {
+      heading: "Pre-Launch and QA",
+      body: "Cross-browser and device testing, Lighthouse audits, accessibility review, redirects from your old URLs, analytics setup, and a final walkthrough before we go live. The site that ships is the site you signed off on.",
+    },
+    {
+      heading: "Post Launch",
+      body: "A full handoff with documentation so you or another developer can take the wheel. CMS training so simple edits like copy tweaks, image swaps, and new service blocks do not require a developer. Ongoing support packages available if you would rather keep me on retainer for updates, monitoring, and additions.",
     },
   ],
 } as const;

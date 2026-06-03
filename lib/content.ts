@@ -1,3 +1,19 @@
+export const industries = [
+  "RIAs",
+  "Insurance Brokers",
+  "IMOs",
+  "CPAs",
+  "Estate Planning Attorneys",
+  "Wealth Managers",
+  "Financial Advisors",
+] as const;
+
+export const stats = [
+  { value: "95+", label: "Lighthouse Performance" },
+  { value: "3–6", label: "Weeks to Launch" },
+  { value: "1", label: "Business Day Reply" },
+] as const;
+
 export const hero = {
   headline: {
     lead: "Better",

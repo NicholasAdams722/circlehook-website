@@ -2,6 +2,7 @@
 
 import { useState, type SVGProps } from "react";
 import { Heading } from "@/components/Heading";
+import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
 import { services } from "@/lib/content";
 import { cn } from "@/lib/utils";
@@ -124,17 +125,17 @@ export function Services() {
           const Icon = icons[i];
           const isOpen = openIndex === i;
           return (
-            <button
-              key={block.heading}
-              type="button"
-              onClick={() => setOpenIndex(isOpen ? null : i)}
-              aria-expanded={isOpen}
-              className={cn(
-                "group flex flex-col rounded-lg border border-border bg-background p-6 text-left transition-colors duration-200",
-                "hover:border-accent focus-visible:border-accent focus-visible:outline-none",
-                isOpen && "border-accent"
-              )}
-            >
+            <Reveal key={block.heading} delay={i * 80}>
+              <button
+                type="button"
+                onClick={() => setOpenIndex(isOpen ? null : i)}
+                aria-expanded={isOpen}
+                className={cn(
+                  "group flex w-full flex-col rounded-lg border border-border bg-background p-6 text-left transition-colors duration-200",
+                  "hover:border-accent focus-visible:border-accent focus-visible:outline-none",
+                  isOpen && "border-accent"
+                )}
+              >
               <div className="flex items-center gap-4">
                 <Icon
                   className={cn(
@@ -172,7 +173,8 @@ export function Services() {
                   </p>
                 </div>
               </div>
-            </button>
+              </button>
+            </Reveal>
           );
         })}
       </div>

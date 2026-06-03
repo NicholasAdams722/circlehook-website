@@ -20,7 +20,7 @@ export const hero = {
     rest: " Websites for the Financial Industry",
   },
   subheadline:
-    "Most web agencies treat compliance as a footnote. I treat it as the starting point, because I also serve as Director of Operations at a state-registered RIA. Modern stack, fast launch, and copy your CCO will approve on the first draft.",
+    "I build websites and digital tools for the financial industry, with an operator's eye for the details that actually matter. Modern stack, fast launch, and an inside view of the regulatory world your firm works in.",
   ctaLabel: "Schedule a free consultation",
 } as const;
 
@@ -47,7 +47,7 @@ export const services = {
 } as const;
 
 export const whatYouGet = {
-  heading: "What makes our work different",
+  heading: "What makes my work different",
   blocks: [
     {
       heading: "Design that holds up to scrutiny.",
@@ -69,11 +69,11 @@ export const whatYouGet = {
 } as const;
 
 export const workflow = {
-  heading: "Our process",
+  heading: "My process",
   steps: [
     {
       heading: "Onboarding",
-      body: "We start with a 30-minute call to understand your firm, your clients, and what success looks like. You get a written scope and timeline within three business days. No surprise change orders mid-project.",
+      body: "I start with a 30-minute call to understand your firm, your clients, and what success looks like. You get a written scope and timeline within three business days. No surprise change orders mid-project.",
     },
     {
       heading: "Design and Production",
@@ -81,7 +81,7 @@ export const workflow = {
     },
     {
       heading: "Pre-Launch and QA",
-      body: "Cross-browser and device testing, Lighthouse audits, accessibility review, redirects from your old URLs, analytics setup, and a final walkthrough before we go live. The site that ships is the site you signed off on.",
+      body: "Cross-browser and device testing, Lighthouse audits, accessibility review, redirects from your old URLs, analytics setup, and a final walkthrough before I push it live. The site that ships is the site you signed off on.",
     },
     {
       heading: "Post Launch",

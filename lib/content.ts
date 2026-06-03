@@ -93,10 +93,14 @@ export const workflow = {
 export const whoIAm = {
   heading: "Who's behind Circle Hook",
   paragraphs: [
-    "Nick Adams. I run Circle Hook from Tennessee. By day, I serve as Director of Operations at Quantum Capital (a DBA of Patriot Advisory Group LLC, a state-registered RIA). I handle compliance infrastructure, marketing systems, archiving, and the firm's digital presence.",
-    "After hours and on weekends, I build websites for the firms I wish my firm could hire. RIAs, insurance brokers, IMOs, CPAs, estate planning attorneys. The conservative, regulated, trust-driven businesses that have been stuck with template sites and agencies that don't understand them.",
-    "This is a one-person studio. You work with me directly. No account manager, no subcontracted designers, no hand-offs. When you message me, I'm the one responding.",
+    `I'm Nick, the founder of Circle Hook. Based in Nashville, I build websites and digital tools for businesses in financial services and other regulated industries, the kind of work where the details aren't optional and "close enough" isn't a standard anyone can live with.`,
+    `My path here isn't the usual one. Alongside Circle Hook, I serve as Director of Operations at a registered investment advisor, where I'm responsible for the systems and compliance infrastructure the firm runs on. So I don't just build your site and hand it off. I understand the regulatory world you operate in, from marketing rules to recordkeeping, because I work inside it every single day.`,
+    `I build on a modern stack and I think in systems, not one-off projects. The goal is never a website that only looks good in a screenshot. It's an operation that keeps working after launch: fast, maintainable, and built so your team can actually run it.`,
   ],
+  promise: {
+    heading: "My promise to you",
+    body: `I treat your business like it's my own. I'll tell you the truth even when it isn't what you want to hear, I'll do the work I said I'd do, and I won't disappear once the invoice clears. You'll always know where your project stands and exactly what you're paying for.`,
+  },
 } as const;
 
 export const FIRM_TYPES = [

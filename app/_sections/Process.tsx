@@ -9,13 +9,13 @@ export function Process() {
       <Heading level="section">{workflow.heading}</Heading>
       <div
         role="list"
-        className="mt-12 grid grid-cols-1 gap-10 md:mt-16 md:gap-14"
+        className="mt-12 grid grid-cols-1 gap-4 md:mt-16 md:gap-6"
       >
         {workflow.steps.map((step, i) => (
           <Reveal key={step.heading} delay={i * 100}>
             <div
               role="listitem"
-              className="grid grid-cols-[auto_1fr] items-baseline gap-5 md:gap-10"
+              className="grid grid-cols-[auto_1fr] items-baseline gap-5 rounded-lg border border-border bg-background p-6 transition-colors duration-200 hover:border-accent md:gap-10 md:p-8"
             >
               <div className="font-display text-4xl font-medium text-accent md:text-6xl">
                 {String(i + 1).padStart(2, "0")}

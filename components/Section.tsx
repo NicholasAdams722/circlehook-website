@@ -38,7 +38,7 @@ export function Section({
     <Tag
       id={id}
       className={cn(
-        "relative px-6 py-24 md:px-8 md:py-32",
+        "relative px-6 py-20 md:px-8 md:py-32",
         toneClass[tone],
         className
       )}

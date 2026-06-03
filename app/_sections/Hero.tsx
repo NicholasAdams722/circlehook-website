@@ -12,7 +12,7 @@ export function Hero() {
     <Section
       id="top"
       width="wide"
-      className="pt-32 md:pt-48"
+      className="pt-20 md:pt-48"
       background={<HeroTicker />}
     >
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16">
@@ -40,13 +40,13 @@ export function Hero() {
           </div>
         </div>
         <div className="md:col-span-5">
-          <div className="relative mx-auto aspect-square w-56 overflow-hidden rounded-full bg-muted ring-1 ring-border sm:w-64 md:ml-auto md:mr-0 md:w-full md:max-w-sm">
+          <div className="relative mx-auto aspect-square w-44 overflow-hidden rounded-full bg-muted ring-1 ring-border sm:w-56 md:ml-auto md:mr-0 md:w-full md:max-w-sm">
             <Image
               src="/headshot-nick.png"
               alt="Nick Adams, founder of Circle Hook"
               fill
               priority
-              sizes="(max-width: 768px) 16rem, 24rem"
+              sizes="(max-width: 640px) 11rem, (max-width: 768px) 14rem, 24rem"
               className="object-cover"
             />
           </div>

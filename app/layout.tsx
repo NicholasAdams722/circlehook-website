@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
@@ -46,6 +46,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1F4A3F",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
 };
 
 const jsonLd = {

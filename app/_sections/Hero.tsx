@@ -60,7 +60,7 @@ export function Hero() {
         </div>
         <div className="md:col-span-5">
           <div className="w-[9.35rem] sm:w-[11.9rem] md:ml-auto md:mr-0 md:w-full md:max-w-[20.4rem]">
-            <div className="relative aspect-square w-full overflow-hidden rounded-full bg-muted ring-1 ring-border">
+            <div className="relative aspect-square w-full">
               <Image
                 src="/headshot-nick.png"
                 alt="Nick Adams, founder of Circle Hook"

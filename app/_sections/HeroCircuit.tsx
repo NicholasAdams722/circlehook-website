@@ -5,28 +5,36 @@ type Trace = {
 };
 
 const palette = {
-  accent: "#D9E04C", // brand chartreuse
-  cyan: "#7DD3FC", // sky cyan
-  mint: "#86EFAC", // soft mint
-  cream: "#F5F1E8", // warm cream
+  electric: "#22D3EE", // bright electric cyan
+  blue: "#60A5FA", // medium blue
+  sky: "#7DD3FC", // light sky blue
+  white: "#FFFFFF", // pure white
 };
 
-// All traces originate near the visual center (600, 400) of a 1200x800 viewBox,
-// turning at right angles like real PCB traces. Endpoints get a "node" dot
-// that lights up when the trace finishes drawing.
+// Traces originate outside the hero text block (text block roughly at
+// x:200-660, y:200-600 in viewBox). A 40px "moat" of empty space sits
+// between the text and any trace origin so circuits never start on top
+// of text. Traces then radiate outward in all 4 directions.
 const traces: Trace[] = [
-  { d: "M 600 400 V 320 H 720 V 200", end: { x: 720, y: 200 }, color: palette.accent },
-  { d: "M 600 400 H 700 V 280 H 820", end: { x: 820, y: 280 }, color: palette.cyan },
-  { d: "M 600 400 H 780 V 340 H 1000", end: { x: 1000, y: 340 }, color: palette.accent },
-  { d: "M 600 400 H 740 V 420 H 1080", end: { x: 1080, y: 420 }, color: palette.mint },
-  { d: "M 600 400 H 700 V 500 H 880 V 580", end: { x: 880, y: 580 }, color: palette.accent },
-  { d: "M 600 400 V 520 H 480 V 640", end: { x: 480, y: 640 }, color: palette.cream },
-  { d: "M 600 400 H 500 V 540 H 320", end: { x: 320, y: 540 }, color: palette.accent },
-  { d: "M 600 400 H 460 V 460 H 220", end: { x: 220, y: 460 }, color: palette.cyan },
-  { d: "M 600 400 H 440 V 380 H 180", end: { x: 180, y: 380 }, color: palette.accent },
-  { d: "M 600 400 H 480 V 300 H 280 V 220", end: { x: 280, y: 220 }, color: palette.mint },
-  { d: "M 600 400 V 320 H 500 V 220", end: { x: 500, y: 220 }, color: palette.accent },
-  { d: "M 600 400 V 360 H 660 V 240 H 880", end: { x: 880, y: 240 }, color: palette.cream },
+  // TOP - origins at y=160 (40px above text), going up
+  { d: "M 280 160 V 60", end: { x: 280, y: 60 }, color: palette.electric },
+  { d: "M 420 160 V 100 H 540 V 30", end: { x: 540, y: 30 }, color: palette.sky },
+  { d: "M 560 160 V 80 H 700 V 20", end: { x: 700, y: 20 }, color: palette.blue },
+
+  // RIGHT - origins at x=700 (40px right of text), going right
+  { d: "M 700 220 H 820 V 140 H 980", end: { x: 980, y: 140 }, color: palette.electric },
+  { d: "M 700 300 H 800 V 260 H 1080", end: { x: 1080, y: 260 }, color: palette.white },
+  { d: "M 700 380 H 780 V 340 H 1180", end: { x: 1180, y: 340 }, color: palette.sky },
+  { d: "M 700 460 H 820 V 480 H 1100", end: { x: 1100, y: 480 }, color: palette.electric },
+  { d: "M 700 540 H 780 V 580 H 960", end: { x: 960, y: 580 }, color: palette.blue },
+  { d: "M 700 580 H 740 V 720 H 1020", end: { x: 1020, y: 720 }, color: palette.sky },
+
+  // BOTTOM - origins at y=640 (40px below text), going down
+  { d: "M 280 640 V 720 H 380 V 780", end: { x: 380, y: 780 }, color: palette.electric },
+  { d: "M 440 640 V 700 H 320 V 780", end: { x: 320, y: 780 }, color: palette.white },
+
+  // LEFT - origins at x=160 (40px left of text), going left
+  { d: "M 160 480 H 60 V 580", end: { x: 60, y: 580 }, color: palette.blue },
 ];
 
 const TOTAL_DURATION_S = 6;
@@ -37,7 +45,7 @@ export function HeroCircuit() {
     <>
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.55] [mask-image:radial-gradient(circle_at_center,black_0%,black_45%,transparent_85%)]"
+        className="pointer-events-none absolute inset-0 overflow-hidden opacity-[0.5]"
       >
         <svg
           viewBox="0 0 1200 800"

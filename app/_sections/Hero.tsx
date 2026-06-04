@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Heading } from "@/components/Heading";
 import { Section } from "@/components/Section";
 import { hero } from "@/lib/content";
-import { HeroTicker } from "./HeroTicker";
+import { HeroCircuit } from "./HeroCircuit";
 
 function SwirlyArrow({ className }: { className?: string }) {
   return (
@@ -32,7 +32,7 @@ export function Hero() {
       id="top"
       width="wide"
       className="pt-20 md:pt-48"
-      background={<HeroTicker />}
+      background={<HeroCircuit />}
     >
       <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-7">

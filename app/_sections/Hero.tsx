@@ -60,14 +60,14 @@ export function Hero() {
         </div>
         <div className="md:col-span-5">
           <div className="w-[9.35rem] sm:w-[11.9rem] md:ml-auto md:mr-0 md:w-full md:max-w-[20.4rem]">
-            <div className="relative aspect-square w-full">
+            <div className="relative aspect-square w-full overflow-hidden bg-muted ring-1 ring-border [border-radius:58%_42%_55%_45%_/_50%_55%_45%_50%]">
               <Image
                 src="/headshot-nick.png"
                 alt="Nick Adams, founder of Circle Hook"
                 fill
                 priority
                 sizes="(max-width: 640px) 9.35rem, (max-width: 768px) 11.9rem, 20.4rem"
-                className="object-cover [mask-image:linear-gradient(to_bottom,black_55%,transparent_98%)]"
+                className="object-cover"
               />
             </div>
             <a

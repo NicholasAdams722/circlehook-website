@@ -8,18 +8,18 @@ import { HeroTicker } from "./HeroTicker";
 function SwirlyArrow({ className }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 50 50"
+      viewBox="0 0 60 60"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.75"
+      strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
       className={className}
       aria-hidden="true"
     >
-      <path d="M 40 44 C 40 34 28 34 30 26 C 32 20 42 21 38 14 C 33 8 22 10 18 4" />
-      <path d="M 18 4 L 24 7" />
-      <path d="M 18 4 L 20 10" />
+      <path d="M 52 54 C 52 44 40 44 36 36 C 32 28 44 24 40 18 C 36 13 26 14 20 9" />
+      <path d="M 20 9 L 30 11" />
+      <path d="M 20 9 L 23 19" />
     </svg>
   );
 }

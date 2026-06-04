@@ -67,7 +67,7 @@ export function Hero() {
                 fill
                 priority
                 sizes="(max-width: 640px) 9.35rem, (max-width: 768px) 11.9rem, 20.4rem"
-                className="object-cover"
+                className="object-cover [mask-image:linear-gradient(to_bottom,black_55%,transparent_98%)]"
               />
             </div>
             <a

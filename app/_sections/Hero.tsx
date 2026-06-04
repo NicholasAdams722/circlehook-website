@@ -5,6 +5,25 @@ import { Section } from "@/components/Section";
 import { hero } from "@/lib/content";
 import { HeroTicker } from "./HeroTicker";
 
+function SwirlyArrow({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 50 50"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={className}
+      aria-hidden="true"
+    >
+      <path d="M 40 44 C 40 34 28 34 30 26 C 32 20 42 21 38 14 C 33 8 22 10 18 4" />
+      <path d="M 18 4 L 24 7" />
+      <path d="M 18 4 L 20 10" />
+    </svg>
+  );
+}
+
 export function Hero() {
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL ?? "#contact";
 
@@ -40,15 +59,24 @@ export function Hero() {
           </div>
         </div>
         <div className="md:col-span-5">
-          <div className="relative mx-auto aspect-square w-44 overflow-hidden rounded-full bg-muted ring-1 ring-border sm:w-56 md:ml-auto md:mr-0 md:w-full md:max-w-sm">
-            <Image
-              src="/headshot-nick.png"
-              alt="Nick Adams, founder of Circle Hook"
-              fill
-              priority
-              sizes="(max-width: 640px) 11rem, (max-width: 768px) 14rem, 24rem"
-              className="object-cover"
-            />
+          <div className="mx-auto w-[9.35rem] sm:w-[11.9rem] md:ml-auto md:mr-0 md:w-full md:max-w-[20.4rem]">
+            <div className="relative aspect-square w-full overflow-hidden rounded-full bg-muted ring-1 ring-border">
+              <Image
+                src="/headshot-nick.png"
+                alt="Nick Adams, founder of Circle Hook"
+                fill
+                priority
+                sizes="(max-width: 640px) 9.35rem, (max-width: 768px) 11.9rem, 20.4rem"
+                className="object-cover"
+              />
+            </div>
+            <a
+              href="#who"
+              className="mt-3 flex items-center justify-center gap-2 text-sm italic text-foreground/60 transition-colors hover:text-accent md:justify-end"
+            >
+              <span>who is this guy?</span>
+              <SwirlyArrow className="size-7" />
+            </a>
           </div>
         </div>
       </div>

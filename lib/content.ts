@@ -1,11 +1,11 @@
 export const hero = {
   headline: {
-    before: "The ",
-    italic: "right",
-    after: " tools for your business needs.",
+    before: "Your website is just the ",
+    italic: "surface",
+    after: ".",
   },
   subheadline:
-    "Every week brings another AI tool, another design system, another platform promising to change everything. You could spend hours a day keeping up. Or you could work with a team that already does, and chooses only what your business actually needs.",
+    "We build what people see and everything underneath that makes it work for your business: CRM, automation, integrations, AI. The right rig for your conditions.",
   ctaLabel: "Start a project",
   ctaHref: "#contact",
 } as const;

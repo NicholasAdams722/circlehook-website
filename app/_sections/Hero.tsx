@@ -24,7 +24,7 @@ export function Hero() {
           </div>
           <div
             aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent md:from-black/55 md:via-black/25 md:to-transparent"
+            className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/30 to-transparent md:from-black/65 md:via-black/25 md:to-transparent"
           />
         </>
       }

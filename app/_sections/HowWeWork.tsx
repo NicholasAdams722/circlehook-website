@@ -1,17 +1,23 @@
 import { Heading } from "@/components/Heading";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
-import { workflow } from "@/lib/content";
+import { howWeWork } from "@/lib/content";
 
-export function Process() {
+export function HowWeWork() {
   return (
-    <Section id="process" width="wide" tone="muted">
-      <Heading level="section">{workflow.heading}</Heading>
+    <Section id="how-we-work" width="wide" tone="muted">
+      <Heading level="section">
+        {howWeWork.heading.before}
+        <span className="text-accent">
+          {howWeWork.heading.italic}
+        </span>
+        {howWeWork.heading.after}
+      </Heading>
       <div
         role="list"
         className="mt-12 grid grid-cols-1 gap-4 md:mt-16 md:gap-6"
       >
-        {workflow.steps.map((step, i) => (
+        {howWeWork.steps.map((step, i) => (
           <Reveal key={step.heading} delay={i * 100}>
             <div
               role="listitem"

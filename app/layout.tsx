@@ -3,6 +3,7 @@ import { IBM_Plex_Sans, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/layout/Header";
+import { CompassWatermark } from "@/components/brand/CompassWatermark";
 
 const plexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1F4A3F",
+  themeColor: "#2A1E19",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -93,6 +94,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <CompassWatermark />
         <Header />
         {children}
       </body>

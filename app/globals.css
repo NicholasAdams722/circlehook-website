@@ -36,24 +36,24 @@
 }
 
 :root {
-  --background: #1F4A3F;
+  --background: #2A1E19;
   --foreground: #F5F1E8;
-  --card: #1F4A3F;
+  --card: #2A1E19;
   --card-foreground: #F5F1E8;
-  --popover: #1F4A3F;
+  --popover: #2A1E19;
   --popover-foreground: #F5F1E8;
   --primary: #F5F1E8;
-  --primary-foreground: #1F4A3F;
-  --secondary: #173A31;
+  --primary-foreground: #2A1E19;
+  --secondary: #1E1613;
   --secondary-foreground: #F5F1E8;
-  --muted: #173A31;
-  --muted-foreground: #B5C2BD;
-  --accent: #D9E04C;
-  --accent-foreground: #1F4A3F;
+  --muted: #1E1613;
+  --muted-foreground: #B8A38F;
+  --accent: #E89060;
+  --accent-foreground: #2A1E19;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #2A5C4E;
-  --input: #2A5C4E;
-  --ring: #D9E04C;
+  --border: #8A6D5E;
+  --input: #8A6D5E;
+  --ring: #E89060;
   --radius: 0.5rem;
 }
 
@@ -70,6 +70,31 @@
     scroll-padding-top: 5rem;
     -webkit-tap-highlight-color: transparent;
     text-size-adjust: 100%;
+  }
+}
+
+@layer utilities {
+  .bg-accent {
+    background-image: linear-gradient(to right, #F4D26E, #F0A060, #D46C55);
+  }
+
+  .text-accent,
+  .text-accent\/80,
+  .text-accent\/70,
+  .text-accent\/60,
+  .text-accent\/50 {
+    background-image: linear-gradient(to right, #F4D26E, #F0A060, #D46C55);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .hover\:text-accent:hover,
+  .group:hover .group-hover\:text-accent {
+    background-image: linear-gradient(to right, #F4D26E, #F0A060, #D46C55);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }
 

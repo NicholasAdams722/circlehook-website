@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState, type SVGProps } from "react";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Our approach", href: "#approach" },
-  { label: "Process", href: "#process" },
-  { label: "About", href: "#who" },
+  { label: "The Problem", href: "#problem" },
+  { label: "Philosophy", href: "#philosophy" },
+  { label: "Tackle Box", href: "#tackle-box" },
+  { label: "How We Work", href: "#how-we-work" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -71,14 +72,22 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-border bg-background">
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-3 px-6 md:px-8">
         <a
           href="#top"
           onClick={() => setIsOpen(false)}
-          className="font-display text-[1.3rem] font-medium tracking-tight text-foreground"
+          aria-label="Circle Hook home"
+          className="flex items-center text-foreground"
         >
-          Circle Hook
+          <Image
+            src="/brand/circle-hook-wordmark.png"
+            alt="Circle Hook"
+            width={800}
+            height={445}
+            priority
+            className="h-11 w-auto"
+          />
         </a>
 
         <div className="flex items-center gap-3 md:gap-8">
@@ -100,7 +109,7 @@ export function Header() {
           <a
             href="#contact"
             onClick={() => setIsOpen(false)}
-            className="inline-flex h-11 items-center rounded-md bg-accent px-4 text-base font-medium text-accent-foreground transition-colors hover:bg-accent/90"
+            className="inline-flex h-11 items-center rounded-md bg-accent px-4 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
           >
             <span className="md:hidden">Quote</span>
             <span className="hidden md:inline">Get a Quote</span>
@@ -129,7 +138,7 @@ export function Header() {
         <div className="overflow-hidden">
           <nav
             aria-label="Mobile"
-            className="border-t border-border/60 bg-background/95 backdrop-blur-md"
+            className="border-t border-border bg-background"
           >
             <ul className="flex flex-col px-6 py-2">
               {navItems.map((item) => (

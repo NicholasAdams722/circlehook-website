@@ -20,7 +20,7 @@ const widthClass: Record<Width, string> = {
 };
 
 const toneClass: Record<Tone, string> = {
-  default: "bg-background",
+  default: "",
   muted: "bg-muted",
 };
 

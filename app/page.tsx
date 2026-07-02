@@ -1,24 +1,22 @@
 import { Hero } from "./_sections/Hero";
-import { Services } from "./_sections/Services";
-import { WhatYouGet } from "./_sections/WhatYouGet";
-import { Process } from "./_sections/Process";
-import { WhoIAm } from "./_sections/WhoIAm";
+import { Problem } from "./_sections/Problem";
+import { Philosophy } from "./_sections/Philosophy";
+import { Promise } from "./_sections/Promise";
+import { TackleBox } from "./_sections/TackleBox";
+import { HowWeWork } from "./_sections/HowWeWork";
 import { Contact } from "./_sections/Contact";
 import { Footer } from "./_sections/Footer";
-import { IndustryMarquee } from "@/components/IndustryMarquee";
-import { StatBand } from "@/components/StatBand";
 
 export default function Page() {
   return (
     <>
       <main className="flex-1">
         <Hero />
-        <IndustryMarquee />
-        <Services />
-        <WhatYouGet />
-        <StatBand />
-        <Process />
-        <WhoIAm />
+        <Problem />
+        <Philosophy />
+        <Promise />
+        <TackleBox />
+        <HowWeWork />
         <Contact />
       </main>
       <Footer />

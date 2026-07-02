@@ -1,6 +1,7 @@
 import { Heading } from "@/components/Heading";
 import { Reveal } from "@/components/Reveal";
 import { Section } from "@/components/Section";
+import { Flourish } from "@/components/brand/Flourish";
 import { contact } from "@/lib/content";
 
 export function Contact() {
@@ -12,7 +13,14 @@ export function Contact() {
   return (
     <Section id="contact" width="prose">
       <Reveal>
-        <Heading level="section">{contact.heading}</Heading>
+        <Flourish className="mb-6 h-3 w-32 text-accent/80" />
+        <Heading level="section">
+          {contact.heading.before}
+          <span className="text-accent">
+            {contact.heading.italic}
+          </span>
+          {contact.heading.after}
+        </Heading>
         <p className="mt-6 max-w-[65ch] text-[17px] leading-[1.6] text-foreground lg:text-[18px] lg:leading-[1.65]">
           {contact.leadText}
         </p>
@@ -25,14 +33,14 @@ export function Contact() {
               href={calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-12 items-center justify-center rounded-md bg-accent px-6 text-base font-medium text-accent-foreground transition-colors hover:bg-accent/90"
+              className="inline-flex h-12 items-center justify-center rounded-md bg-accent px-6 text-base font-medium text-accent-foreground transition-opacity hover:opacity-90"
             >
               {contact.quickContact.scheduleLabel}
             </a>
           )}
           <a
             href={mailtoHref}
-            className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/30 px-6 text-base font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
+            className="inline-flex h-12 items-center justify-center rounded-md border border-foreground/60 px-6 text-base font-medium text-foreground transition-colors hover:border-accent hover:text-accent"
           >
             {contact.quickContact.emailLabel}
           </a>

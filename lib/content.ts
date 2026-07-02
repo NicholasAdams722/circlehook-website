@@ -1,8 +1,8 @@
 export const hero = {
   headline: {
-    before: "",
-    italic: "Drowning",
-    after: " in new technology?",
+    before: "The ",
+    italic: "right",
+    after: " tools for your business needs.",
   },
   subheadline:
     "Every week brings another AI tool, another design system, another platform promising to change everything. You could spend hours a day keeping up. Or you could work with a team that already does, and chooses only what your business actually needs.",

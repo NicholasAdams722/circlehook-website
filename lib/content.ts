@@ -26,7 +26,7 @@ export const problem = {
 export const philosophy = {
   heading: { before: "Why ", italic: "Circle Hook", after: "?" },
   paragraphs: [
-    "A circle hook is a fishing hook engineered for exactly one outcome: a clean catch that holds. Not a better all-purpose hook. A specific tool, designed for a specific job.",
+    "A circle hook is a fishing hook engineered for exactly one outcome. Its point curves 90 degrees back toward the shank so it hooks cleanly and releases cleanly. Ideal for catch and release. Not a better all-purpose hook. A specific tool, designed for a specific job.",
     "That's the standard we hold every technology to. We've spent years working across site builders, custom code, CRM systems, automation, and AI. Not because chasing new tools is fun (though sometimes it is), but so that when you tell us what your business needs to say, we already know which tools say it best.",
     "Sometimes that's a proven site builder that gets you live fast and keeps costs sane. Sometimes it's fully custom code because nothing off the shelf fits how you operate. Usually it's a smart mix. The tool is never the point. The result is.",
   ],
@@ -39,7 +39,7 @@ export const promise = {
     after: ".",
   },
   paragraphs: [
-    "You know the proverb. Most agencies ignore it. They build you something only they can maintain, then bill you every time you need a comma changed. That's not a service. That's a leash.",
+    "You know the proverb. Most agencies ignore it. They build you something only they can maintain, then bill you every time you need a comma changed. That's not a service. That's a leash. Our hook is designed for release. We work the same way.",
     "We build with the opposite goal: systems your team can actually run. Clean builds instead of tangled shortcuts that pile up into technical debt. Training for you and your staff so updating content, checking leads, and running your day-to-day never requires a support ticket. Documentation that makes sense to humans.",
     "When you do keep us around, and many clients do, it's for the work that genuinely benefits from a specialist: strategy, new builds, automation, growth. Not hostage maintenance.",
   ],

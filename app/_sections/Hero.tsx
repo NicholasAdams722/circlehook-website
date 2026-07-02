@@ -11,8 +11,8 @@ export function Hero() {
       width="wide"
       className="overflow-hidden pt-16 md:min-h-screen md:pt-24"
       background={
-        <>
-          <div aria-hidden="true" className="absolute inset-0">
+        <div aria-hidden="true" className="hidden md:block">
+          <div className="absolute inset-0">
             <Image
               src="/brand/hero-boat.png"
               alt=""
@@ -22,11 +22,8 @@ export function Hero() {
               className="object-cover object-top"
             />
           </div>
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/30 to-transparent md:from-black/65 md:via-black/25 md:to-transparent"
-          />
-        </>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/25 to-transparent" />
+        </div>
       }
     >
       <div className="md:max-w-[48%]">
@@ -54,6 +51,16 @@ export function Hero() {
             <a href={hero.ctaHref}>{hero.ctaLabel}</a>
           </Button>
         </div>
+      </div>
+
+      <div className="relative mt-10 aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-border md:hidden motion-safe:animate-in motion-safe:fade-in motion-safe:duration-1000 motion-safe:[animation-delay:400ms] motion-safe:[animation-fill-mode:both]">
+        <Image
+          src="/brand/hero-boat.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+        />
       </div>
     </Section>
   );

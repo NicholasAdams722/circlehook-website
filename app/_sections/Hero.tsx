@@ -21,34 +21,24 @@ export function Hero() {
               sizes="100vw"
               className="object-cover object-top"
             />
+            <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/25 to-transparent" />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/25 to-transparent" />
-          <svg
-            viewBox="0 0 1440 40"
-            preserveAspectRatio="none"
-            className="pointer-events-none absolute inset-x-0 bottom-0 h-10 w-full"
-          >
-            <path
-              d="M0,0 Q720,70 1440,0 L1440,40 L0,40 Z"
-              fill="var(--background)"
-            />
-          </svg>
         </div>
       }
     >
-      <div className="md:max-w-[48%]">
+      <div className="md:max-w-[48%] md:text-white">
         <Heading
           level="hero"
-          className="text-[32px] leading-[1.1] [text-shadow:0_2px_16px_rgba(0,0,0,0.55)] lg:text-[48px] lg:leading-[1.05] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-700 motion-safe:[animation-delay:80ms] motion-safe:[animation-fill-mode:both]"
+          className="text-[32px] leading-[1.1] md:[text-shadow:0_2px_16px_rgba(0,0,0,0.55)] lg:text-[48px] lg:leading-[1.05] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-2 motion-safe:duration-700 motion-safe:[animation-delay:80ms] motion-safe:[animation-fill-mode:both]"
         >
           {hero.headline.before}
-          <span className="text-accent [filter:drop-shadow(0_2px_16px_rgba(0,0,0,0.55))]">
+          <span className="text-accent md:[filter:drop-shadow(0_2px_16px_rgba(0,0,0,0.55))]">
             {hero.headline.italic}
           </span>
           {hero.headline.after}
         </Heading>
 
-        <p className="mt-6 max-w-[62ch] text-[15px] leading-[1.6] text-foreground/90 [text-shadow:0_2px_16px_rgba(0,0,0,0.55)] motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-1 motion-safe:duration-700 motion-safe:[animation-delay:220ms] motion-safe:[animation-fill-mode:both] lg:text-[16px] lg:leading-[1.6]">
+        <p className="mt-6 max-w-[62ch] text-[15px] leading-[1.6] text-foreground/90 motion-safe:animate-in motion-safe:fade-in motion-safe:slide-in-from-bottom-1 motion-safe:duration-700 motion-safe:[animation-delay:220ms] motion-safe:[animation-fill-mode:both] md:text-white/90 md:[text-shadow:0_2px_16px_rgba(0,0,0,0.55)] lg:text-[16px] lg:leading-[1.6]">
           {hero.subheadline}
         </p>
 

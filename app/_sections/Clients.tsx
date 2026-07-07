@@ -18,7 +18,7 @@ const rotations = [
 
 export function Clients() {
   return (
-    <Section id="clients" width="wide" tone="muted">
+    <Section id="clients" width="wide">
       <Heading level="section">
         {clients.heading.before}
         <span className="text-accent">{clients.heading.italic}</span>

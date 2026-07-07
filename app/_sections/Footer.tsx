@@ -7,10 +7,11 @@ export function Footer() {
   return (
     <Section
       as="footer"
-      width="prose"
+      width="wide"
+      belly={false}
       className="border-t border-border py-12 text-sm text-muted-foreground md:py-16"
     >
-      <div className="flex flex-col items-start gap-6">
+      <div className="flex max-w-3xl flex-col items-start gap-6">
         <Image
           src="/brand/circle-hook-wordmark.svg"
           alt="Circle Hook"

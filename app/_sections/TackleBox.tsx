@@ -50,18 +50,6 @@ export function TackleBox() {
       </Heading>
 
       <div className="mt-12 grid grid-cols-1 gap-12 md:mt-16 md:grid-cols-2 md:gap-16">
-        <div className="md:sticky md:top-24 md:self-start">
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg ring-1 ring-border">
-            <Image
-              src="/brand/hero-boat.png"
-              alt=""
-              fill
-              sizes="(min-width: 768px) 50vw, 100vw"
-              className="object-cover object-center"
-            />
-          </div>
-        </div>
-
         <ul className="flex flex-col gap-10">
           {tackleBox.blocks.map((block, i) => {
             const lureSrc = `/brand/tackle/lure-${lureFiles[i]}.png`;
@@ -85,6 +73,18 @@ export function TackleBox() {
             );
           })}
         </ul>
+
+        <div className="md:sticky md:top-24 md:self-start">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-lg ring-1 ring-border">
+            <Image
+              src="/brand/hero-boat.png"
+              alt=""
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover object-center"
+            />
+          </div>
+        </div>
       </div>
     </Section>
   );

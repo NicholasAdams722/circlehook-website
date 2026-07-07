@@ -25,9 +25,9 @@ export const problem = {
 
 export const promise = {
   heading: {
-    before: "We teach you to ",
-    italic: "fish",
-    after: ".",
+    before: "We ",
+    italic: "teach",
+    after: " you to fish.",
   },
   paragraphs: [
     "You know the proverb. Most agencies ignore it. They build you something only they can maintain, then bill you every time you need a comma changed. That's not a service. That's a leash. Our hook is designed for release. We work the same way.",
@@ -71,11 +71,6 @@ export const tackleBox = {
 } as const;
 
 export const howWeWork = {
-  heading: {
-    before: "Understand. Prototype. Build. ",
-    italic: "Teach",
-    after: ".",
-  },
   steps: [
     {
       tabLabel: "Understand",

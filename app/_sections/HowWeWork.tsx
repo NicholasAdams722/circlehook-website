@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
+import { Fragment, useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import Image from "next/image";
 import { Heading } from "@/components/Heading";
 import { Section } from "@/components/Section";
@@ -8,7 +8,7 @@ import { howWeWork } from "@/lib/content";
 import { cn } from "@/lib/utils";
 
 const outlinedNumberStyle: CSSProperties = {
-  WebkitTextStroke: "2px var(--color-foreground)",
+  WebkitTextStroke: "2px #FFFFFF",
   color: "transparent",
 };
 
@@ -37,12 +37,35 @@ export function HowWeWork() {
   };
 
   return (
-    <Section id="how-we-work" width="wide" tone="muted">
-      <Heading level="section">
-        {howWeWork.heading.before}
-        <span className="text-accent">{howWeWork.heading.italic}</span>
-        {howWeWork.heading.after}
-      </Heading>
+    <Section
+      id="how-we-work"
+      width="wide"
+      background={
+        <div aria-hidden="true" className="absolute inset-0">
+          <Image
+            src="/brand/promise-topo.png"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover object-bottom"
+          />
+          <div className="absolute inset-0 bg-black/55" />
+        </div>
+      }
+    >
+      <div className="text-white">
+        <Heading level="section">
+          {howWeWork.steps.map((s, i) => (
+            <Fragment key={s.tabLabel}>
+              <span className={i === active ? "text-accent" : undefined}>
+                {s.tabLabel}
+              </span>
+              {"."}
+              {i < total - 1 && " "}
+            </Fragment>
+          ))}
+        </Heading>
+      </div>
 
       <div
         role="tablist"
@@ -74,7 +97,7 @@ export function HowWeWork() {
                   "font-display text-[64px] font-medium leading-none transition-all md:text-[96px]",
                   isActive
                     ? "text-accent"
-                    : "text-foreground group-hover:scale-[1.03]"
+                    : "text-white group-hover:scale-[1.03]"
                 )}
               >
                 {i + 1}
@@ -83,8 +106,8 @@ export function HowWeWork() {
                 className={cn(
                   "font-sans text-sm font-semibold uppercase tracking-[0.14em] transition-colors md:text-base",
                   isActive
-                    ? "text-foreground"
-                    : "text-muted-foreground group-hover:text-foreground"
+                    ? "text-white"
+                    : "text-white/70 group-hover:text-white"
                 )}
               >
                 {s.tabLabel}
@@ -99,11 +122,11 @@ export function HowWeWork() {
         role="tabpanel"
         aria-labelledby={tabId(active)}
         key={active}
-        className="mt-12 grid grid-cols-1 gap-8 rounded-lg border border-border bg-background p-6 motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 md:mt-16 md:grid-cols-2 md:gap-12 md:p-10"
+        className="mt-12 grid grid-cols-1 gap-8 rounded-lg border border-white/15 bg-white/5 p-6 shadow-[0_8px_32px_rgba(0,0,0,0.35)] backdrop-blur-md motion-safe:animate-in motion-safe:fade-in motion-safe:duration-500 md:mt-16 md:grid-cols-2 md:gap-12 md:p-10"
       >
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 text-white">
           <Heading level="block">{step.heading}</Heading>
-          <p className="max-w-[60ch] text-[17px] leading-[1.6] text-foreground/85 lg:text-[18px] lg:leading-[1.65]">
+          <p className="max-w-[60ch] text-[17px] leading-[1.6] text-white/85 lg:text-[18px] lg:leading-[1.65]">
             {step.body}
           </p>
           {calendlyUrl && (

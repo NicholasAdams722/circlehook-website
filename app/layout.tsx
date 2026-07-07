@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#2A1E19",
+  themeColor: "#FFFFFF",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -97,6 +97,20 @@ export default function RootLayout({
         <noscript>
           <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
         </noscript>
+        <svg
+          aria-hidden="true"
+          focusable="false"
+          className="absolute h-0 w-0"
+        >
+          <defs>
+            <clipPath id="section-belly-clip" clipPathUnits="objectBoundingBox">
+              <path d="M0,0 L1,0 L1,0.965 Q0.5,1.03 0,0.965 Z" />
+            </clipPath>
+            <clipPath id="section-top-belly-clip" clipPathUnits="objectBoundingBox">
+              <path d="M0,0.035 Q0.5,-0.03 1,0.035 L1,1 L0,1 Z" />
+            </clipPath>
+          </defs>
+        </svg>
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-base focus:font-medium focus:text-foreground focus:outline focus:outline-2 focus:outline-accent"

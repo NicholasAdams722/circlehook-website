@@ -23,15 +23,6 @@ export const problem = {
   ],
 } as const;
 
-export const philosophy = {
-  heading: { before: "Why ", italic: "Circle Hook", after: "?" },
-  paragraphs: [
-    "A circle hook is a fishing hook engineered for exactly one outcome. Its point curves 90 degrees back toward the shank so it hooks cleanly and releases cleanly. Ideal for catch and release. Not a better all-purpose hook. A specific tool, designed for a specific job.",
-    "That's the standard we hold every technology to. We've spent years working across site builders, custom code, CRM systems, automation, and AI. Not because chasing new tools is fun (though sometimes it is), but so that when you tell us what your business needs to say, we already know which tools say it best.",
-    "Sometimes that's a proven site builder that gets you live fast and keeps costs sane. Sometimes it's fully custom code because nothing off the shelf fits how you operate. Usually it's a smart mix. The tool is never the point. The result is.",
-  ],
-} as const;
-
 export const promise = {
   heading: {
     before: "We teach you to ",
@@ -47,60 +38,112 @@ export const promise = {
 
 export const tackleBox = {
   heading: {
-    before: "Every tool in the box has a ",
-    italic: "purpose",
-    after: ". Here's ours.",
+    before: "Here's what we ",
+    italic: "build",
+    after: ".",
   },
   blocks: [
     {
-      heading: "Website Builders",
-      body: "When speed and budget matter, modern builders deliver polished, professional sites without custom-development overhead. If a builder fits your needs, we'll tell you so, even though it's the less expensive answer.",
+      heading: "Marketing Websites",
+      body: "The public-facing site that carries your credibility. Compliance-aware from day one, fast to load, easy for a CCO to review, and built to convert the visitor that matters. If a builder like Squarespace fits your needs, we'll tell you so, even though it's the less expensive answer.",
     },
     {
-      heading: "Custom Code",
-      body: "When nothing off the shelf matches your business, we build the tool ourselves. Modern frameworks, shaped around exactly how you work. No template compromises, no workarounds.",
+      heading: "Custom Internal Applications",
+      body: "When your team is working across ten browser tabs and three spreadsheets, we build one tool that replaces them. Advisor dashboards, workflow apps, review queues. Shaped around exactly how your team works, not around a template that almost fits.",
     },
     {
-      heading: "Hand-Crafted Design",
-      body: "Original design built around your brand: your voice, your colors, your typography. A look that belongs to you, not to ten thousand other sites running the same theme.",
+      heading: "Lead and Conversion CRM",
+      body: "Getting attention means nothing if the follow-up drops. We set up the CRM that captures every inquiry, organizes your pipeline, and tracks which channels actually produce revenue. Compliance-friendly retention baked in.",
+    },
+    {
+      heading: "Content Management (Sanity)",
+      body: "Your team should edit the site without opening a ticket. We build a custom Sanity backend so your marketing lead updates content, publishes new advisor bios, and swaps disclosures without touching code or waiting on us.",
     },
     {
       heading: "Software Stack Integration",
-      body: "A website shouldn't stand alone. We connect payments, scheduling, inventory, email, and automation so information flows through your business without snags, and nothing gets re-typed by hand.",
+      body: "A website shouldn't stand alone. We connect scheduling, payments, email, archiving, and automation so information flows between your systems without snags, and nothing gets re-typed by hand.",
     },
     {
-      heading: "CRM and Lead Management",
-      body: "Getting a lead's attention means nothing if the follow-up drops. We set up CRM systems that capture every inquiry, organize your pipeline, and turn interest into revenue.",
-    },
-    {
-      heading: "AI Integration",
-      body: "Done right, AI works like sonar on a fishing boat: it shows you where to spend your effort instead of guessing. Done wrong, it's a gimmick. We implement it where it earns its keep, skip it where it doesn't, and show your team how to use it.",
+      heading: "AI Where It Earns Its Keep",
+      body: "Done right, AI works like sonar on a fishing boat: it shows you where to spend your effort instead of guessing. Done wrong, it's a gimmick. We implement it where it pays off, skip it where it doesn't, and show your team how to use it.",
     },
   ],
 } as const;
 
 export const howWeWork = {
   heading: {
-    before: "Understand. Choose. Build. ",
+    before: "Understand. Prototype. Build. ",
     italic: "Teach",
     after: ".",
   },
   steps: [
     {
+      tabLabel: "Understand",
       heading: "Understand your situation.",
       body: "Before we talk tools, we talk about you. Your customers, your goals, and what success means for your business: leads, sales, bookings, credibility.",
     },
     {
-      heading: "Choose the right tools.",
-      body: "We recommend an approach and explain exactly why each tool made the cut. You'll never pay for complexity you don't need or get boxed into a platform that can't grow with you.",
+      tabLabel: "Prototype",
+      heading: "Prototype it.",
+      body: "Before we write a line of code, we build the shape of what we're making. Mockups, clickable prototypes, walkthroughs. You see how it works while it's still cheap to change, and we validate the flow before committing it to production.",
     },
     {
+      tabLabel: "Build",
       heading: "Build it clean.",
       body: "No shortcuts that turn into technical debt. We build systems that are as easy to maintain in year three as they are impressive on launch day.",
     },
     {
+      tabLabel: "Teach",
       heading: "Teach your team.",
       body: "Before we're done, your people know how to run what we built. Updates, content, leads, reports. You own it, you understand it, you're never stranded.",
+    },
+  ],
+} as const;
+
+export const clients = {
+  heading: { before: "Featured ", italic: "clients", after: "." },
+  intro:
+    "A small sample of the businesses currently in our waters. Real problems, right tools, work we're proud of.",
+  featured: [
+    {
+      name: "Lady Dawgs",
+      sector: "Food & Hospitality",
+      description:
+        "Nashville's only lady-owned weenie wagon. Bold branding and a mobile-first site that keeps the cart rolling.",
+      image: "/brand/clients/lady-dawgs.png",
+      href: null as string | null,
+    },
+    {
+      name: "The Muir-Sexton Wedding",
+      sector: "Personal Event",
+      description:
+        "A calm, editorial invitation site for a summer wedding in Corvallis. RSVPs, travel details, and story all in one place.",
+      image: "/brand/clients/muir-sexton.png",
+      href: null as string | null,
+    },
+    {
+      name: "Quantum Letter",
+      sector: "Finance / Publishing",
+      description:
+        "A subscription publishing platform for a financial research writer. Free-tier funnel, paid archive, and reader analytics.",
+      image: "/brand/clients/quantum-letter.png",
+      href: null as string | null,
+    },
+    {
+      name: "Caffeez",
+      sector: "E-commerce",
+      description:
+        "A DTC caffeine-pouch brand launch. Storefront, payments, inventory, and email marketing wired into one clean flow.",
+      image: "/brand/clients/caffeez.png",
+      href: null as string | null,
+    },
+    {
+      name: "BCR Ventures",
+      sector: "Insurance",
+      description:
+        "An insurance network's marketing site. Built for credibility, partner recruiting, and clean lead capture.",
+      image: "/brand/clients/bcr-ventures.png",
+      href: null as string | null,
     },
   ],
 } as const;

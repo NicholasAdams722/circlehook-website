@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 
 const navItems = [
   { label: "The Problem", href: "#problem" },
-  { label: "Philosophy", href: "#philosophy" },
   { label: "Tackle Box", href: "#tackle-box" },
   { label: "How We Work", href: "#how-we-work" },
   { label: "Contact", href: "#contact" },
@@ -81,10 +80,10 @@ export function Header() {
           className="flex items-center text-foreground"
         >
           <Image
-            src="/brand/circle-hook-wordmark.png"
+            src="/brand/circle-hook-wordmark.svg"
             alt="Circle Hook"
-            width={800}
-            height={445}
+            width={1347}
+            height={830}
             priority
             className="h-11 w-auto"
           />

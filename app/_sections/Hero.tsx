@@ -23,6 +23,16 @@ export function Hero() {
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-br from-black/65 via-black/25 to-transparent" />
+          <svg
+            viewBox="0 0 1440 40"
+            preserveAspectRatio="none"
+            className="pointer-events-none absolute inset-x-0 bottom-0 h-10 w-full"
+          >
+            <path
+              d="M0,0 Q720,70 1440,0 L1440,40 L0,40 Z"
+              fill="var(--background)"
+            />
+          </svg>
         </div>
       }
     >

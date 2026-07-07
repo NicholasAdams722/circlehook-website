@@ -94,6 +94,15 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <noscript>
+          <style>{`[data-reveal]{opacity:1!important;transform:none!important}`}</style>
+        </noscript>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:text-base focus:font-medium focus:text-foreground focus:outline focus:outline-2 focus:outline-accent"
+        >
+          Skip to main content
+        </a>
         <CompassWatermark />
         <Header />
         {children}

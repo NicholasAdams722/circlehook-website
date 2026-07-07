@@ -12,10 +12,10 @@ export function Footer() {
     >
       <div className="flex flex-col items-start gap-6">
         <Image
-          src="/brand/circle-hook-wordmark.png"
+          src="/brand/circle-hook-wordmark.svg"
           alt="Circle Hook"
-          width={800}
-          height={445}
+          width={1347}
+          height={830}
           className="h-14 w-auto opacity-85"
         />
         <p className="font-display text-[18px] italic text-foreground/85 lg:text-[20px]">

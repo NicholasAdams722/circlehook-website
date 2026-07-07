@@ -50,7 +50,7 @@ export function CompassWatermark() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden"
+      className="pointer-events-none fixed inset-0 -z-10 overflow-hidden opacity-40 md:opacity-100"
     >
       <div
         ref={fadeRef}

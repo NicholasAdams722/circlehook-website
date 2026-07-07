@@ -14,7 +14,7 @@ export function Hero() {
         <div aria-hidden="true" className="hidden md:block">
           <div className="absolute inset-0">
             <Image
-              src="/brand/hero-boat.png"
+              src="/brand/hero-bathymetric.png"
               alt=""
               fill
               priority
@@ -55,7 +55,7 @@ export function Hero() {
 
       <div className="relative mt-10 aspect-[4/3] w-full overflow-hidden rounded-lg ring-1 ring-border md:hidden motion-safe:animate-in motion-safe:fade-in motion-safe:duration-1000 motion-safe:[animation-delay:400ms] motion-safe:[animation-fill-mode:both]">
         <Image
-          src="/brand/hero-boat.png"
+          src="/brand/hero-bathymetric.png"
           alt=""
           fill
           sizes="100vw"

@@ -18,7 +18,7 @@ export function Promise() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/75 via-black/55 to-black/40" />
         </div>
       }
     >

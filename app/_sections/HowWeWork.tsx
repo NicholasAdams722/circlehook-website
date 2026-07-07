@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
+import { Fragment, useEffect, useId, useRef, useState, type CSSProperties, type KeyboardEvent } from "react";
 import Image from "next/image";
 import { Heading } from "@/components/Heading";
 import { Section } from "@/components/Section";
@@ -36,6 +36,16 @@ export function HowWeWork() {
     tabRefs.current[next]?.focus();
   };
 
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!window.matchMedia("(max-width: 767px)").matches) return;
+    tabRefs.current[active]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  }, [active]);
+
   return (
     <Section
       id="how-we-work"
@@ -70,7 +80,7 @@ export function HowWeWork() {
       <div
         role="tablist"
         aria-label="Our process"
-        className="mt-12 grid grid-cols-2 gap-6 md:mt-16 md:grid-cols-4 md:gap-10"
+        className="mt-12 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:mt-16 md:grid md:grid-cols-4 md:gap-10 md:overflow-visible md:px-0 md:pb-0"
       >
         {howWeWork.steps.map((s, i) => {
           const isActive = i === active;
@@ -88,7 +98,7 @@ export function HowWeWork() {
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActive(i)}
               onKeyDown={(e) => handleKey(e, i)}
-              className="group flex flex-col items-center gap-3 rounded-md p-2 text-center transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2"
+              className="group flex shrink-0 basis-[75%] snap-start flex-col items-center gap-3 rounded-md p-2 text-center transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 md:basis-auto"
             >
               <span
                 aria-hidden="true"

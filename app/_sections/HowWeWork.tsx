@@ -16,6 +16,7 @@ export function HowWeWork() {
   const [active, setActive] = useState(0);
   const baseId = useId();
   const tabRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const tablistRef = useRef<HTMLDivElement | null>(null);
   const calendlyUrl = process.env.NEXT_PUBLIC_CALENDLY_URL;
 
   const total = howWeWork.steps.length;
@@ -42,9 +43,66 @@ export function HowWeWork() {
     tabRefs.current[active]?.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
-      inline: "start",
+      inline: "center",
     });
   }, [active]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const container = tablistRef.current;
+    if (!container) return;
+    if (!window.matchMedia("(max-width: 767px)").matches) return;
+
+    let raf: number | null = null;
+    let debounce: ReturnType<typeof setTimeout> | null = null;
+
+    const applyTransforms = () => {
+      const cRect = container.getBoundingClientRect();
+      const cCenter = cRect.left + cRect.width / 2;
+      const halfWidth = cRect.width / 2;
+      let closestIdx = 0;
+      let closestDist = Infinity;
+
+      tabRefs.current.forEach((tab, i) => {
+        if (!tab) return;
+        const tRect = tab.getBoundingClientRect();
+        const tCenter = tRect.left + tRect.width / 2;
+        const dist = Math.abs(tCenter - cCenter);
+        const nDist = Math.min(dist / halfWidth, 1);
+        tab.style.transform = `scale(${(1 - nDist * 0.32).toFixed(3)})`;
+        tab.style.opacity = (1 - nDist * 0.6).toFixed(3);
+        if (dist < closestDist) {
+          closestDist = dist;
+          closestIdx = i;
+        }
+      });
+
+      if (debounce) clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        setActive((prev) => (prev !== closestIdx ? closestIdx : prev));
+      }, 130);
+      raf = null;
+    };
+
+    const onScroll = () => {
+      if (raf === null) raf = requestAnimationFrame(applyTransforms);
+    };
+
+    container.addEventListener("scroll", onScroll, { passive: true });
+    applyTransforms();
+
+    return () => {
+      container.removeEventListener("scroll", onScroll);
+      if (raf) cancelAnimationFrame(raf);
+      if (debounce) clearTimeout(debounce);
+      tabRefs.current.forEach((tab) => {
+        if (tab) {
+          tab.style.transform = "";
+          tab.style.opacity = "";
+        }
+      });
+    };
+  }, []);
 
   return (
     <Section
@@ -78,9 +136,10 @@ export function HowWeWork() {
       </div>
 
       <div
+        ref={tablistRef}
         role="tablist"
         aria-label="Our process"
-        className="mt-12 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:mt-16 md:grid md:grid-cols-4 md:gap-10 md:overflow-visible md:px-0 md:pb-0"
+        className="mt-12 -mx-6 flex snap-x snap-mandatory gap-2 overflow-x-auto scroll-smooth pl-[25vw] pr-[25vw] pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:mx-0 md:mt-16 md:grid md:grid-cols-4 md:gap-10 md:overflow-visible md:px-0 md:pb-0"
       >
         {howWeWork.steps.map((s, i) => {
           const isActive = i === active;
@@ -98,7 +157,7 @@ export function HowWeWork() {
               tabIndex={isActive ? 0 : -1}
               onClick={() => setActive(i)}
               onKeyDown={(e) => handleKey(e, i)}
-              className="group flex shrink-0 basis-[75%] snap-start flex-col items-center gap-3 rounded-md p-2 text-center transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 md:basis-auto"
+              className="group flex shrink-0 basis-[50%] snap-center flex-col items-center gap-3 rounded-md p-2 text-center will-change-transform transition-colors focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-2 md:basis-auto md:will-change-auto"
             >
               <span
                 aria-hidden="true"
